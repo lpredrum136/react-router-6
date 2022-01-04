@@ -8,6 +8,7 @@ import Invoices from './pages/Invoices'
 import Expenses from './pages/Expenses'
 import NotFound from './pages/NotFound'
 import Invoice from './pages/Invoice'
+import NewInvoice from './pages/NewInvoice'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.render(
               element={<h2 style={{ padding: '1rem' }}>Select an Invoice</h2>}
             />
             <Route path=":invoiceId" element={<Invoice />} />
+            <Route path="new" element={<NewInvoice />} />
           </Route>
           <Route path="expenses" element={<Expenses />} />
           {/* No other routes match */}

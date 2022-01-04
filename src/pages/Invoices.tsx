@@ -5,6 +5,7 @@ const Invoices = () => {
   return (
     <main>
       <h2>Invoices</h2>
+      <Link to="new">Create New Invoice</Link>
       <div style={{ display: 'flex' }}>
         <nav
           style={{
@@ -14,7 +15,7 @@ const Invoices = () => {
         >
           {invoices.map(invoice => (
             <Link
-              to={`/invoices/${invoice.id}`}
+              to={invoice.id.toString()}
               key={invoice.id}
               style={{ display: 'block', margin: '1rem' }}
             >
