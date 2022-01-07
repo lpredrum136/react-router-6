@@ -11,7 +11,8 @@ const Invoice = () => {
   )
 
   useEffect(() => {
-    if (!invoice) navigate('/invoices')
+    // Push user to /invoices, one level up
+    if (!invoice) navigate('..')
   }, [invoice])
 
   return (
